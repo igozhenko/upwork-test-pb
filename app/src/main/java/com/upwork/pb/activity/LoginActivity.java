@@ -90,7 +90,6 @@ public class LoginActivity extends BaseActivity {
                 User user = new User();
                 user.setLogin(myself.getLogin());
                 user.setName(myself.getName());
-                user.setEmail(myself.getEmail());
                 user.setAvatarUrl(myself.getAvatarUrl());
                 EventBus.getDefault().post(new LoginResultEvent(user));
             } catch (Exception e) {

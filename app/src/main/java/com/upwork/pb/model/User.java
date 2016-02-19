@@ -9,8 +9,6 @@ import java.io.Serializable;
 public class User implements Serializable {
     @JsonProperty("avatar_url")
     private String mAvatarUrl;
-    @JsonProperty("email")
-    private String mEmail;
     @JsonProperty("login")
     private String mLogin;
     @JsonProperty("name")
@@ -22,14 +20,6 @@ public class User implements Serializable {
 
     public void setAvatarUrl(String avatarUrl) {
         mAvatarUrl = avatarUrl;
-    }
-
-    public String getEmail() {
-        return mEmail;
-    }
-
-    public void setEmail(String email) {
-        mEmail = email;
     }
 
     public String getLogin() {
