@@ -2,16 +2,24 @@
     <string name="app_name">Test</string>
 
     <!--activity Login (lg)-->
-    <string name="ac_lg_title">Sign In</string>
+    <string name="ac_lg_button_login">Sing In</string>
+    <string name="ac_lg_dialog_singing_in_title">Singing in …</string>
+    <string name="ac_lg_error_wrong_credentials">Please enter valid credentials.</string>
     <string name="ac_lg_hint_login">Login</string>
     <string name="ac_lg_hint_password">Password</string>
-    <string name="ac_lg_button_login">Sing In</string>
+    <string name="ac_lg_title">Sign In</string>
 
     <!--activity Profile (pr) -->
     <string name="ac_pr_title">Profile</string>
 
+    <!--dialog -->
+    <string name="dg_error_button_positive">Close</string>
+    <string name="dg_error_title">Error</string>
+    <string name="dg_please_wait_title">Please wait …</string>
+
     <!--errors-->
     <string name="er_et_required">Required</string>
     <string name="er_no_connection">No connection!</string>
+
 
 </resources>
