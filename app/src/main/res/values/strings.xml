@@ -11,6 +11,7 @@
 
     <!--activity Profile (pr) -->
     <string name="ac_pr_title">Profile</string>
+    <string name="ac_pr_menu_log_out">Log Out</string>
 
     <!--dialog -->
     <string name="dg_error_button_positive">Close</string>

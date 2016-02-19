@@ -2,6 +2,8 @@ package com.upwork.pb.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -26,8 +28,7 @@ public class ProfileActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         User user = App.getDataManager().getUser();
         if (null == user) {
-            startActivity(new Intent(this, LoginActivity.class));
-            finish();
+            startLoginActivity();
             return;
         }
         setTitle(R.string.ac_pr_title);
@@ -41,5 +42,28 @@ public class ProfileActivity extends BaseActivity {
                 .placeholder(R.drawable.ac_pr_avatar_placeholder)
                 .crossFade()
                 .into(mAvatarView);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.ac_profile, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.menu_ac_pr_log_out:
+                App.getDataManager().setUser(null);
+                startLoginActivity();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    private void startLoginActivity() {
+        startActivity(new Intent(this, LoginActivity.class));
+        finish();
     }
 }
