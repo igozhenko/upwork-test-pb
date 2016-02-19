@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Test</string>
+
+    <!--activity Login (lg)-->
+    <string name="ac_lg_title">Sign In</string>
+
+    <!--activity Profile (pr) -->
+    <string name="ac_pr_title">Profile</string>
+
+
+</resources>
