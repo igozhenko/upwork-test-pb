@@ -7,6 +7,7 @@ import android.widget.EditText;
 import com.upwork.pb.R;
 import com.upwork.pb.app.App;
 import com.upwork.pb.event.BaseEvent;
+import com.upwork.pb.helper.NetworkState;
 import com.upwork.pb.model.User;
 
 import org.kohsuke.github.GHMyself;
@@ -31,6 +32,10 @@ public class LoginActivity extends BaseActivity {
     @OnClick(R.id.ac_lg_button_login)
     void onClickButtonLogin() {
         if (!FormValidator.validate(this, new SimpleErrorPopupCallback(this, true))) return;
+        if (new NetworkState(this).isDisconnected()) {
+            showError(getText(R.string.er_no_connection));
+            return;
+        }
         showProgress(getText(R.string.ac_lg_dialog_singing_in_title));
         new GitGubLoginTask(mLoginView.getText().toString(), mPasswordView.getText().toString()).start();
     }

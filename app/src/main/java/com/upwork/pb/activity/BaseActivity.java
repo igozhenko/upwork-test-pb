@@ -30,7 +30,11 @@ abstract class BaseActivity extends AppCompatActivity {
     }
 
     public void showError(Throwable error) {
-        showError(error.getMessage(), null);
+        showError(error.getMessage());
+    }
+
+    public void showError(CharSequence message) {
+        showError(message, null);
     }
 
     public void showProgress(@Nullable CharSequence message) {
