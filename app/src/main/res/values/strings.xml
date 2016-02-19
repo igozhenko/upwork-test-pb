@@ -3,9 +3,15 @@
 
     <!--activity Login (lg)-->
     <string name="ac_lg_title">Sign In</string>
+    <string name="ac_lg_hint_login">Login</string>
+    <string name="ac_lg_hint_password">Password</string>
+    <string name="ac_lg_button_login">Sing In</string>
 
     <!--activity Profile (pr) -->
     <string name="ac_pr_title">Profile</string>
 
+    <!--errors-->
+    <string name="er_et_required">Required</string>
+    <string name="er_no_connection">No connection!</string>
 
 </resources>

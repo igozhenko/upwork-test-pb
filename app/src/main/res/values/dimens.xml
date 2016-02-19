@@ -1,2 +1,5 @@
 <resources>
+    <dimen name="padding">16dp</dimen>
+    <dimen name="padding_half">8dp</dimen>
+
 </resources>
